@@ -4,7 +4,7 @@
 //pragma solidity >=x.y.z <=a.b.c --> versions that go from x.y.z to a.b.c
 //pragma solidity x.y.z --> only this version
 //pragma solidity ^0.x.0 --> each version from 0.x.0 to 0.x.9
-pragma solidity ^0.6.0;
+pragma solidity >=0.8.0;
 
 contract SimpleStorage {
 
