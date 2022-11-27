@@ -5,30 +5,30 @@ pragma solidity >= 0.8.0;
 contract Traceability {
 
     struct Product {
-        bytes8 latitude;
-        bytes8 longitude;
-        bytes8 altitude;
-        bytes8 timestamp;
-        bytes8 device;
+        string latitude;
+        string longitude;
+        string altitude;
+        string timestamp;
+        string device;
     }
 
     uint8 private trackNumber = 0;
 
-    mapping(bytes8 => Product) private product;
+    mapping(string => Product) private product;
     Product[] private track;
 
-    event Track(bytes8 _latitude, bytes8 _longitude, bytes8 _altitude, bytes8 _timestamp, bytes8 _device);
+    event Track(string _latitude, string _longitude, string _altitude, string _timestamp, string _device);
 
     event Length(uint8 _trackNumber);
 
-    event GetDeviceTrack(bytes8 _latitude, bytes8 _longitude, bytes8 _altitude, bytes8 _timestamp, bytes8 _device);
+    event GetDeviceTrack(string _latitude, string _longitude, string _altitude, string _timestamp, string _device);
 
 
     function trackProduct(string memory _latitude, string memory _longitude, string memory _altitude, string memory _timestamp, string memory _device) public {
-        bytes8 _device_ = bytes8(bytes(_device));
-        product[_device_] = Product ({ latitude: bytes8(bytes(_latitude)), longitude: bytes8(bytes(_longitude)), altitude: bytes8(bytes(_altitude)), timestamp: bytes8(bytes(_timestamp)), device: bytes8(bytes(_device)) });
+        string memory _device_ = string(bytes(_device));
+        product[_device_] = Product ({ latitude: _latitude, longitude: _longitude, altitude: _altitude, timestamp: _timestamp, device: _device });
         track.push(product[_device_]);
-        emit Track(bytes8(bytes(_latitude)), bytes8(bytes(_longitude)), bytes8(bytes(_altitude)), bytes8(bytes(_timestamp)), bytes8(bytes(_device)));
+        emit Track(_latitude, _longitude, _altitude, _timestamp, _device);
         trackNumber += 1;
     }
 
@@ -37,8 +37,8 @@ contract Traceability {
     }
 
     function getDeviceTrack(string memory _device) public {
-        Product memory p = product[bytes8(bytes(_device))];
-        require(p.timestamp != 0, "Device not present");
+        Product memory p = product[_device];
+        require(keccak256(abi.encodePacked(p.timestamp)) != keccak256(abi.encodePacked("")), "Device not present");
         emit GetDeviceTrack(p.latitude, p.longitude, p.altitude, p.timestamp, p.device);
     }
 
