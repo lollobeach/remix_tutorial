@@ -40,6 +40,25 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "funders",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
 						"name": "ethAmount",
 						"type": "uint256"
 					}
@@ -140,10 +159,10 @@
 			]
 		},
 		"contracts/FundMe.sol": {
-			"keccak256": "0xa305684fddb052c6fd0ad27cd0b0c5ec9bf8e58064c6d6d32f523608dccb9036",
+			"keccak256": "0xa701fe17e5c7a6067f9de66450e8b918ddcd97ff8645f00e207a911492354b8f",
 			"urls": [
-				"bzz-raw://beb767e562d9d028bcb4eecae6409415d30a6bcc82596a29b2396418a67c2f80",
-				"dweb:/ipfs/QmW4iQC1m1BF1skJxuziCSeANvAHJ4nzvaVeygJgDebW9d"
+				"bzz-raw://f970969a4ff441d187b70f9c2b95c7067ca32933fdbe8cf432ed899d222d6042",
+				"dweb:/ipfs/QmcaJmZfMbmdxW46UMH7L6dPRmsX52UUoEvXpq6U9Y3mVc"
 			]
 		}
 	},

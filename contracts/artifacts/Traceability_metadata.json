@@ -1,0 +1,169 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "bytes8",
+						"name": "_name",
+						"type": "bytes8"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint8",
+						"name": "_latitude",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint8",
+						"name": "_longitude",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"name": "GetProduct",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint8",
+						"name": "_length",
+						"type": "uint8"
+					}
+				],
+				"name": "Length",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "bytes8",
+						"name": "_name",
+						"type": "bytes8"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint8",
+						"name": "_latitude",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint8",
+						"name": "_longitude",
+						"type": "uint8"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"name": "Track",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "getLength",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes8",
+						"name": "_name",
+						"type": "bytes8"
+					}
+				],
+				"name": "getProduct",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes8",
+						"name": "_name",
+						"type": "bytes8"
+					},
+					{
+						"internalType": "uint8",
+						"name": "_latitude",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint8",
+						"name": "_longitude",
+						"type": "uint8"
+					},
+					{
+						"internalType": "uint8",
+						"name": "_timestamp",
+						"type": "uint8"
+					}
+				],
+				"name": "trackProduct",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Traceability.sol": "Traceability"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Traceability.sol": {
+			"keccak256": "0xa342ae534e967ffdc1e8f7614adaceb13292ee4dc86d9cf4c4b7ebb2d0138c6b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9be4a378abac520332bba4ee8747dc4f2e1eedd564e471abbd3c76c85ad1dfcd",
+				"dweb:/ipfs/QmNSfaP9dcgDVWrsWi31LE6V5tr78tEE1z9M58h6RH5Wrv"
+			]
+		}
+	},
+	"version": 1
+}

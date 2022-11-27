@@ -79,7 +79,7 @@ contract FundMe {
         // to send eht from one address to another
         // require msg.sender = owner
         msg.sender.transfer(address(this).balance);
-        for (uint256 funderIndex=0; funderIndex < funders.lenght; funderIndex++) {
+        for (uint256 funderIndex=0; funderIndex < funders.length; funderIndex++) {
             address funder = funders[funderIndex];
             addressToAmountFounded[funder] = 0;
         }
