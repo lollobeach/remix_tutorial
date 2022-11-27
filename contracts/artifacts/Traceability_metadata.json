@@ -10,30 +10,49 @@
 				"inputs": [
 					{
 						"indexed": false,
+						"internalType": "string",
+						"name": "_error",
+						"type": "string"
+					}
+				],
+				"name": "Error",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
 						"internalType": "bytes8",
-						"name": "_name",
+						"name": "_latitude",
 						"type": "bytes8"
 					},
 					{
 						"indexed": false,
-						"internalType": "uint8",
-						"name": "_latitude",
-						"type": "uint8"
-					},
-					{
-						"indexed": false,
-						"internalType": "uint8",
+						"internalType": "bytes8",
 						"name": "_longitude",
-						"type": "uint8"
+						"type": "bytes8"
 					},
 					{
 						"indexed": false,
-						"internalType": "uint256",
-						"name": "timestamp",
-						"type": "uint256"
+						"internalType": "bytes8",
+						"name": "_altitude",
+						"type": "bytes8"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes8",
+						"name": "_timestamp",
+						"type": "bytes8"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes8",
+						"name": "_device",
+						"type": "bytes8"
 					}
 				],
-				"name": "GetProduct",
+				"name": "GetDeviceTrack",
 				"type": "event"
 			},
 			{
@@ -42,7 +61,7 @@
 					{
 						"indexed": false,
 						"internalType": "uint8",
-						"name": "_length",
+						"name": "_trackNumber",
 						"type": "uint8"
 					}
 				],
@@ -55,30 +74,49 @@
 					{
 						"indexed": false,
 						"internalType": "bytes8",
-						"name": "_name",
+						"name": "_latitude",
 						"type": "bytes8"
 					},
 					{
 						"indexed": false,
-						"internalType": "uint8",
-						"name": "_latitude",
-						"type": "uint8"
-					},
-					{
-						"indexed": false,
-						"internalType": "uint8",
+						"internalType": "bytes8",
 						"name": "_longitude",
-						"type": "uint8"
+						"type": "bytes8"
 					},
 					{
 						"indexed": false,
-						"internalType": "uint256",
-						"name": "timestamp",
-						"type": "uint256"
+						"internalType": "bytes8",
+						"name": "_altitude",
+						"type": "bytes8"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes8",
+						"name": "_timestamp",
+						"type": "bytes8"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes8",
+						"name": "_device",
+						"type": "bytes8"
 					}
 				],
 				"name": "Track",
 				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_device",
+						"type": "string"
+					}
+				],
+				"name": "getDeviceTrack",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			},
 			{
 				"inputs": [],
@@ -88,14 +126,8 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "bytes8",
-						"name": "_name",
-						"type": "bytes8"
-					}
-				],
-				"name": "getProduct",
+				"inputs": [],
+				"name": "getProductTraceability",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -103,24 +135,29 @@
 			{
 				"inputs": [
 					{
-						"internalType": "bytes8",
-						"name": "_name",
-						"type": "bytes8"
-					},
-					{
-						"internalType": "uint8",
+						"internalType": "string",
 						"name": "_latitude",
-						"type": "uint8"
+						"type": "string"
 					},
 					{
-						"internalType": "uint8",
+						"internalType": "string",
 						"name": "_longitude",
-						"type": "uint8"
+						"type": "string"
 					},
 					{
-						"internalType": "uint8",
+						"internalType": "string",
+						"name": "_altitude",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
 						"name": "_timestamp",
-						"type": "uint8"
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_device",
+						"type": "string"
 					}
 				],
 				"name": "trackProduct",
@@ -157,11 +194,11 @@
 	},
 	"sources": {
 		"contracts/Traceability.sol": {
-			"keccak256": "0xa342ae534e967ffdc1e8f7614adaceb13292ee4dc86d9cf4c4b7ebb2d0138c6b",
+			"keccak256": "0x189088ad8a98a602949517e622b85837f7038a029ff1c63a23070824e8dc4448",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://9be4a378abac520332bba4ee8747dc4f2e1eedd564e471abbd3c76c85ad1dfcd",
-				"dweb:/ipfs/QmNSfaP9dcgDVWrsWi31LE6V5tr78tEE1z9M58h6RH5Wrv"
+				"bzz-raw://6fb79e3aefc97759213d4657552cedc66d040a1fcd34cc12fc68f43a0e49b4a0",
+				"dweb:/ipfs/QmTH8WNWJtyiFE2nVmwYXcrAmozfbySfVR5oNth3d1TFP7"
 			]
 		}
 	},
